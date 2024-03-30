@@ -8,7 +8,6 @@ return {
     "MunifTanjim/nui.nvim",
   },
   opts = {
-    NeoTreeGitModified = { highlight = "blue" },
     filesystem = {
       filtered_items = {
         visible = true,
@@ -21,6 +20,7 @@ return {
           untracked = "",
         },
       },
+      name = { use_git_status_colors = false },
       buffers = {
         follow_current_file = {
           enabled = true,
@@ -46,6 +46,7 @@ return {
         enabled = false,
       },
     },
+
     auto_expand_width = true,
   },
 }
