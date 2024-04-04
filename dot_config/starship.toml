@@ -1,0 +1,72 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[›](bold #1dd2af)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+# Disable the package module, hiding it from the prompt completely
+
+[gcloud]
+disabled = true
+
+[python]
+format = '[($version)](bold #4c4c4c) '
+disabled = true
+
+[docker_context]
+format = '[$context](#09c4ff) '
+disabled = true
+
+[directory]
+style = 'bold #991bbd '
+
+[golang]
+format = '[go ($version)](#4c4c4c) '
+
+[battery]
+format = '[$symbol$percentage]($style) '
+full_symbol = '󰁹 '
+
+[[battery.display]]
+threshold = 25
+charging_symbol = '󰂄 '
+discharging_symbol = '󰂃 '
+
+[cmd_duration]
+format = '[$duration](#00afb9) '
+
+[lua]
+format = '[lua ($version)](#4c4c4c) '
+
+[env_var.USER]
+format = '[$env_value]($style) '
+disabled = true
+
+[memory_usage]
+disabled = true
+threshold = -1
+style = '#4c4c4c'
+
+[time]
+disabled = true
+format = '[ $time ](#4c4c4c) '
+time_format = '%T'
+utc_time_offset ='local'
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($bold #5b72f2) '
+symbol = '[ ](#6656f1)'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+modified = '[!](#c862f7)'
+untracked = '[?](#c862f7)'
+staged = '[+](#43e8d8)'
+ahead = '[⇡${count}](#68caf5)'
+behind = '[⇣${count}](#a88ff6)'
+deleted = '[✘](#ff00a8)'
+diverged = '[⇕⇡${ahead_count}⇣${behind_count}](#a88ff6)'
