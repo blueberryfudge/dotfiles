@@ -20,7 +20,7 @@ return {
           untracked = "",
         },
       },
-      name = { use_git_status_colors = false },
+      --name = { use_git_status_colors = false },
       buffers = {
         follow_current_file = {
           enabled = true,

@@ -1,9 +1,10 @@
 return {
   "f-person/git-blame.nvim",
+  event = { "InsertEnter" },
 
   config = function()
     require("gitblame").setup({
-      enabled = true,
+      enabled = false,
     })
   end,
 }
